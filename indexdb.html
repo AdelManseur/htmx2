@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmx and PHP Example</title>
+    <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.js"></script>
+    <style>
+        button{
+            background-color: antiquewhite;
+            border: none;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User List</h1>
+
+    <form id="userListForm">
+        <button type="submit" hx-get="http://localhost/htmx/load_users.php" hx-trigger="click" hx-target="#userList" hx-swap="outerHTML">Load Users</button>
+    </form>
+
+    <div id="userList">
+        <!-- Initial content or content loaded dynamically -->
+    </div>
+
+
+    <div class="row align-items-start">
+
+        <div class="col">
+            <div class="card mt-5" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Post title</h5>
+                  <p class="card-text">Post Content</p>
+                  <a href="#" class="btn btn-danger">Delete Post</a>
+                  <a href="#" class="btn btn-success">Edit Post</a>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+
+</body>
+</html>

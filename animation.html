@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="framework.xss">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            animation-name: div;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes div {
+         0% { background-color: yellow; 
+              translate: 0 0;}
+         100% { background-color: yellowgreen; 
+                translate: 0 550px;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
